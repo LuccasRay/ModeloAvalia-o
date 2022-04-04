@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Avaliação</title>
+    <style type="text/css">
+       .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition:.2s;
+    }
+    .button:active{
+    background-color: #503230;
+    transition:.2s;
+    }
+    #texto{
+        width: 300px;
+    }
+    .hide{
+        display: none;
+    }
+    textarea{
+        resize: none;
+    }
+    fieldset{
+        width: max-content;
+       
+        border: 2px dotted blueviolet;
+    }
+    legend{
+         font-weight: bolder;
+         font-size: 18px;
+    }
+    #campo,#campo2,#campo3,#campo4{
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <h2> Sistema de Avaliação Online </h2>
+    <form>
+        <fieldset>
+            <legend>1. Quais cursos são ofertados na EEEP Amélia Figueiredo de Lavor?</legend>
+            <textarea name="tex1" id="Q02" cols="56" rows="5"></textarea> <br>
+        </fieldset>
+        <fieldset>
+            <div id="c02"></div>
+            <legend>2. Marque as opções que possui os sistemas de numerações novos que 
+                    aprendemos no 1º de Informática</legend>
+        Sistema Octal <input type="checkbox" id="check1" > <br>
+        Sistema Binário <input type="checkbox" id="check2"> <br>
+        Sistema Decimal <input type="checkbox" id="check3"> <br>
+        Algarismos Hexadecimal <input type="checkbox" id="check4"> <br>
+        </fieldset>
+        <fieldset>
+         <div id="c03"></div>
+         <legend>3. Qual o produto abaixo é mais adequado para limpar uma memória RAM?</legend>
+            <label for="iso">Álcool Isopropílico</label>
+            <input type="radio" name="limpeza" id="iso"> <br>
+            <label for="con">Limpa Contato</label>
+            <input type="radio" name="limpeza" id="con"> <br>
+            <label for="alc">Álcool 70%</label>
+            <input type="radio" name="limpeza" id="alc"> <br>
+            <label for="agu">Água</label> 
+            <input type="radio" name="limpeza" id="agu"> <br>
+        </fieldset> 
+
+        <fieldset>
+            <div id="c04"></div>
+            <legend>4. Podemos afirmar que o modo de funcionamento de memória RAM em<br> 
+                DUAL CHANNEL só pode ser feito com pares de módulos de memória. 
+                Marque se a afirmação é verdadeira ou falsa.
+            </legend>
+            <label for="ver">Verdadeira</label>
+            <input type="radio" name="VF" id="ver"> <br>
+            <label for="fal">Falsa</label> 
+            <input type="radio" name="VF" id="fal"> <br>
+        </fieldset>
+        
+        
+        <button type="button" class="button" onclick="corrigirDados()"><b>Corrigir</b></button>
+        <br>
+        <br>
+        <fieldset class="hide">
+            <legend><b>Resumo</b></legend>
+            <div id="campo"></div>
+            <div id="res"></div>
+            <div id="campo2"></div>
+            <div id="res2"></div>
+            <div id="res3"></div>
+            <div id="res4"></div>
+            <div id="res5"></div>
+            <div id="campo3"></div>
+            <div id="ans3"></div>
+            <div id="ans4"></div>
+            <div id="ans5"></div>
+            <div id="ans6"></div>
+            <div id="campo4"></div>
+            <div id="correct"></div>
+            <div id="false"></div>
+        </fieldset>
+
+    </form>
+
+    <script src="tresult.js"></script>
+</body>
+</html>
